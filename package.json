@@ -1,0 +1,35 @@
+{
+  "name": "weather-api-test",
+  "version": "1.0.0",
+  "description": "- O projeto deve ser desenvolvido em Node.js ou PHP - Você pode usar quaisquer bibliotecas de terceiros ou frameworks",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "typescript": "^3.6.2",
+    "typeorm": "0.2.18",
+    "reflect-metadata": "^0.1.10",
+    "mysql": "^2.14.1"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.29",
+    "ts-node-dev": "^1.0.0-pre.42",
+    "ts-node": "3.3.0",
+    "typescript": "3.3.3333"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node_modules/.bin/ts-node-dev --inspect -- src/main.ts",
+    "start": "node_modules/.bin/ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devops-vdt/weather-api-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devops-vdt/weather-api-test/issues"
+  },
+  "homepage": "https://github.com/devops-vdt/weather-api-test#readme"
+}
