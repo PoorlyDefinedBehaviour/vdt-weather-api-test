@@ -8,20 +8,19 @@
     "express-rate-limit": "^5.0.0",
     "mysql": "^2.14.1",
     "reflect-metadata": "^0.1.10",
-    "typeorm": "0.2.18",
-    "typescript": "^3.6.2"
+    "typescript": "3.5.3"
   },
   "devDependencies": {
     "@types/express-rate-limit": "^3.3.2",
     "@types/ioredis": "^4.0.16",
     "@types/node": "^8.0.29",
     "ts-node": "3.3.0",
-    "ts-node-dev": "^1.0.0-pre.42",
-    "typescript": "3.3.3333"
+    "ts-node-dev": "^1.0.0-pre.42"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node_modules/.bin/ts-node-dev --inspect -- src/main.ts",
+    "dev_1": "node_modules/.bin/ts-node-dev --inspect -- src/main.ts",
+    "dev": "node_modules/.bin/ts-node-dev PopulateDB.ts",
     "start": "node_modules/.bin/ts-node src/index.ts"
   },
   "repository": {
