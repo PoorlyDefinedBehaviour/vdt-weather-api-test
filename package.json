@@ -20,10 +20,24 @@
     "ts-node-dev": "^1.0.0-pre.42"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watch",
     "dev": "node_modules/.bin/ts-node-dev --inspect -- src/main.ts",
     "populate": "node_modules/.bin/ts-node-dev PopulateDB.ts",
     "start": "node_modules/.bin/ts-node src/main.ts"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   },
   "repository": {
     "type": "git",
