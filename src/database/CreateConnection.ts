@@ -4,7 +4,7 @@ Mongoose.set("useCreateIndex", true);
 Mongoose.set("useFindAndModify", false);
 
 Mongoose.connect(
-  "mongodb://db:27017/weather-api"
+  process.env.MONGODB_URL as string,
   {
     useCreateIndex: true,
     useNewUrlParser: true,
