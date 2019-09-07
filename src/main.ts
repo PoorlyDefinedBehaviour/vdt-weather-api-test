@@ -4,17 +4,20 @@ load();
 import express from "express";
 import { Express } from "express-serve-static-core";
 
+import cors from "cors";
+
 import RateLimit from "express-rate-limit";
 
 // @ts-ignore
 import Mongoose from "./database/CreateConnection";
 
 import { make_routes } from "./utils/MakeRoutes";
-import { populate_db } from "../PopulateDB";
+import { populate_db } from "./utils/PopulateDB";
 
 async function main(): Promise<void> {
   const server: Express = express();
   server.use(express.json());
+  server.use(cors());
 
   server.use(
     new RateLimit({
@@ -26,6 +29,7 @@ async function main(): Promise<void> {
   make_routes(server);
 
   await populate_db();
+
   await server.listen(((process.env.PORT as unknown) as number) || 3000);
   console.log(`Listening on PORT ${process.env.PORT || 3000} `);
 }

@@ -4,7 +4,9 @@ Mongoose.set("useCreateIndex", true);
 Mongoose.set("useFindAndModify", false);
 
 Mongoose.connect(
-  process.env.MONGODB_URL as string,
+  /test/gi.test(process.env.NODE_ENV as string)
+    ? (process.env.MONGODB_TEST_URL as string)
+    : (process.env.MONGODB_URL as string),
   {
     useCreateIndex: true,
     useNewUrlParser: true,
